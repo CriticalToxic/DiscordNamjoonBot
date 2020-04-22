@@ -29,11 +29,7 @@ async def on_message(message):
         await message.channel.send("alri lil mayyyy")
 
     await client.process_commands(message)
-    txt = "[{}][{}]({}) {}: {}".format(datetime.datetime.now().strftime("%m/%d/%y %H:%M:%S"), message.guild.name, message.channel.name, message.author.name, message.content)
-    f = open("chloelogs.txt","a")
-    f.write(txt + "\n")
-    f.close()
-    print(txt)
+   
 
 
 @client.command(pass_context=True)
@@ -51,4 +47,4 @@ async def botinfo(ctx):
 
 
 
-client.run("NzAyMjc2Nzg3MDAxODg0NzMx.Xp9s6A.iknbW4-5LChjw_iKEEOX2HnUJmw")
+client.run()
